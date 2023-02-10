@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  padding: 15px 60px;
+  box-shadow: 0px 2px 2px #8c8c8c;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header .left,
+header .right {
+  width: 50%;
+  position: relative;
+}
+
+header .navlink {
+  font-size: 24px;
+  color: #000;
+  transition: all 500ms ease-in-out;
+  margin-right: 30px;
+  text-decoration: none;
+}
+header .navlink:hover {
+  color: #218292;
+}
+header .right {
+  display: flex;
+  justify-content: flex-end;
+}
+#weather {
+  position: absolute;
+  right: 90px;
+  top: 75px;
+  color: #fff;
+  font-size: 20px;
+  z-index: 9999;
+}
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ecc188;
+  mix-blend-mode: overlay;
+}
+.text {
+  position: absolute;
+  z-index: 10;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text a {
+  color: #111;
+  text-decoration: none;
+}
+
+/* Source: https://www.w3schools.com/howto/howto_js_topnav.asp */
+
+.topnav {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: rgb(21, 86, 102);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(74, 159, 255);
+  color: darkcyan;
+}
+
+.topnav a.active {
+  background-color: #7d807e;
+  color: rgb(25, 118, 131);
+}
+
+/* the Guide subpage */
+
+/* Background */
+/*code from https://stackoverflow.com/questions/26558483/how-to-differentiate-css-on-main-pages-and-subpages */
+
+.showcase2 {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.showcase2 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ecc188;
+  mix-blend-mode: overlay;
+
+}
+
+  .text2 {
+    position: absolute;
+    z-index: 10;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .text2 a {
+    color: rgb(219, 208, 208);
+    text-decoration: none;
+  }
+
+/* the History subpage */
+/* Background */
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* the Contact subpage */
+/* Background */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 3rem);
+}
+
+.box {
+  border: 1px solid black;
+  height: fit-content;
+  width: 20rem;
+  padding: 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 0.2rem;
+  margin: 0.5rem;
+  border: 1px solid black 0.5rem;
+  width: 30ch;
+}
+
+.container{
+  text-align: center;
+}
+
+/*FAQ title*/
+p {
+  color:#218292;
+  text-align: center;
+}
+
+
+
+/* the FAQ subpage */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 3rem);
+}
+
+.container{
+  text-align: center;
+}
+
+summary {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+
+details > summary::after {
+  position: center;
+  content: "+";
+  right: 20px;
+}
+
+details[open] > summary::after {
+  position: center;
+  content: "-";
+  right: 20px;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* Background */

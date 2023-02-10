@@ -1,0 +1,68 @@
+<!-- Video Source -->
+<!-- https:https://www.pexels.com/video/tourists-in-the-great-wall-of-china-2881976/-->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF=8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"> </head>
+    
+    <!--Page Tab-->
+    <title>Home</title>
+  <body>
+    <header>
+      <!--Navigation Bar-->
+      <div class="left">
+        <a href="guide.html" class="navlink">Guide</a>
+        <a href="history.html" class="navlink">History</a>
+        <a href="contact.html" class="navlink">Contact</a>
+        <a href="faq.html" class="navlink">FAQ</a>
+      </div>
+
+    <!--Discover China Navigation Bar-->
+      <div class="right"><a href="home.html" class="navlink">Discover China</a></div>
+    </header>
+
+    <!--Weather Text for API-->
+    <p id="weather">Current Weather</p>
+
+    <!--Showcase-->
+    <section class="showcase">
+      <video src="video.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+        <h2>What are you waiting for?</h2>
+        <h3>Come and visit the Great Wall of China!</h3>
+        <p><a href="guide.html">Click for Guide</a></p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <script>
+      const showWeather = (target) => {
+        const API_KEY = "7e9cd4af133a4444ad8130229211208"; // weatherapi api key
+        const API_URL = "https://geolocation-db.com/json/"; // For city and country code
+        fetch(API_URL)
+          .then((response) => response.json())
+          .then((data) => {
+            const {
+              city,
+              country_code
+            } = data;
+            const WEATHER_API_URL = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city},${country_code}&aqi=yes`; // openweathermap api - not activated yet
+            fetch(WEATHER_API_URL)
+              .then((response) => response.json())
+              .then((data) => {
+                const condition = data.current.condition.text;
+                target.innerText = condition;
+              });
+          });
+      };
+      showWeather(document.getElementById("weather"));
+
+    </script>
+  </body>
+
+</html>
